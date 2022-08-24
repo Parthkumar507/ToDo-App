@@ -1,0 +1,170 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+}
+#ToDo-Body{
+    background-color: azure;
+    background: linear-gradient(375deg, rgba(234,238,136,0.7794468129048494) 4%, rgba(148,187,233,1) 73%);
+
+    width:45%;
+    height:auto;
+    position: relative;
+    left:25%;
+
+}
+.div-heading h1{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: solid 2px rgb(150, 128, 128);
+    margin-bottom: 10px;
+
+}
+/* form */
+.form-desc{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding-left: 2px;
+border-bottom: solid 2px rgb(150, 128, 128);
+
+}
+
+ label{
+    color:blue
+}
+
+.form-desc input{
+    padding: 3px;
+    padding-top: 5px;
+    width: 93%;
+    border:0px;
+    font-size: 14px;
+    background-color: inherit;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 4s 4s ease; 
+    text-indent: -100%;
+    opacity: 1;
+ }
+input,select,option{
+    outline:none;
+}
+
+/* Form desc */
+.cate_date{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+border-bottom: solid 2px rgb(150, 128, 128);
+}
+.cat-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:50%;
+    border-right: solid 2px rgb(150, 128, 128);
+margin-left: 5px;
+padding: 10px;
+height: 50px;
+
+}
+
+.cat-div select{
+    margin-top: 8px;
+    width:325px;
+    height: 30px;
+    background-color: inherit;
+    border:0px;
+    
+}
+
+/* Date div */
+.date-div{
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#dateInput{
+    margin-top: 15px;
+    background-color: inherit;
+    border:0px
+
+}
+
+#btn-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+button{
+    font-size: 18px;
+    padding: 17px;
+    margin-right: 5px;
+    margin-top: 25px;
+    color:white;
+}
+#form-submit-btn{
+    background-color: black;
+}
+
+#form-delete-btn{
+    background-color: red;
+}
+
+
+/* #ToDo-Display{
+
+} */
+.singleToDo{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* background-color: rgb(227, 248, 215); */
+    background: linear-gradient(214deg, rgba(34,193,195,1) 11%, rgba(253,243,45,1) 100%);
+
+    margin: 2px;
+}
+
+.singleToDo input{
+    margin-top: 18px;
+}
+
+
+.Single-categ{
+    position: absolute;
+    right: 10px;
+    width:10%;
+}
+.singleToDo .desc{
+color:purple;
+width:75%;
+display: flex;
+align-items: flex-start;
+overflow-x:auto;
+padding-left: 15px;
+}
+.desc ::-webkit-scrollbar{
+    width: 0 !important ;
+    background: transparent;
+    display: none;
+}
+
+.display-date{
+    display: flex;
+    align-items: flex-start;
+    margin-left: 15px;
+}
+.cat-btn{
+width:auto;
+margin:auto;
+padding: 0px;
+height:50px;
+min-width: 50px;
+border:0px;
+}

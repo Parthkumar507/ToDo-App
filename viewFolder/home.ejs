@@ -1,0 +1,122 @@
+<!-- Home ejs is very similiar to html just it have some js function -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=TitleName%>
+    </title>
+    <script src="https://kit.fontawesome.com/d0a0a409f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="ToDo-Body">
+        <div class="div-heading">
+            <h1>ToDo App</h1>
+        </div>
+        <div id="first-half">
+            <form action="/create-ToDo" method="POST">
+
+                <div class="form-desc">
+                    <label for="desc">Description</label>
+                    <input type="text" name="desc" id="desc" placeholder="What do you need to do ?" required>
+                </div>
+
+                <div class="cate_date">
+                    <div class="cat-div">
+                        <label for="category">Category</label>
+                        <select name="category" id="category">
+                            <option value="">Choose a Category</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Work">Work</option>
+                            <option value="Home">Home</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="date-div">
+                        <label for="dateInput">Due Date:</label>
+                        <!-- <input type="date" id="dateInput" name="UserDate"> -->
+                        <input type="datetime-local" id="dateInput" name="UserDate">
+
+                    </div>
+
+                </div>
+
+                <div id="btn-div">
+
+                    <button type="Submit" id="form-submit-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add new Task
+                    </button>
+                    <button id="form-delete-btn" type="Submit" form="tasks-list-form">
+                        <i class="fa-solid fa-trash-can"></i>
+                        Delete Tasks
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+        <div id="second-half">
+
+        </div>
+
+        <form action="/delete-contact" method="post" id="tasks-list-form">
+        <div id="ToDo-Display">
+            <ul>
+                <%for(let i of ToDo_List){%>
+                    <li class="singleToDo-div">
+                        <div class="singleToDo">
+                            <input type="checkbox" name="id_check" value="<%=i._id%>">
+
+                            <div class="desc">
+                                <p>
+                                    <%=i.desc%>
+                                </p>
+                            </div>
+
+                        <div class="Single-categ">
+
+
+
+                            <button type="button" class="cat-btn" style="background-color: <%= color_list[i.category] %>;"> <%= i.category %> </button>
+                        </div>
+
+                            
+
+                        </div>
+
+                        <div class="display-date">
+
+                            <p>
+                                <i class="fa-solid fa-calendar-days">
+
+                                </i>
+                             
+                                <%=i.date%>
+
+                            </p>
+                        </div>
+                       
+
+                    </li>
+                    <%}%>
+
+            </ul>
+        </div>
+    </form>
+
+
+    </div>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
